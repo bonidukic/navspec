@@ -1,0 +1,128 @@
+metadata:
+  name: "Developers Dashboard"
+  description: "Developer-specific tools and resources"
+  version: "1.0.0"
+  tags: ["developers", "dev", "engineering"]
+
+categories:
+  - name: "Development Environment"
+    description: "Local development setup and tools"
+    icon: "desktop"
+    links:
+      - name: "Local Dev Server"
+        url: "http://localhost:3000"
+        description: "Main application development server"
+        tags: ["dev", "local", "app"]
+        status: "active"
+        
+      - name: "Database Admin"
+        url: "http://localhost:7777"
+        description: "Local database management interface"
+        tags: ["dev", "local", "database"]
+        status: "active"
+        
+      - name: "Redis Commander"
+        url: "http://localhost:8081"
+        description: "Redis database management"
+        tags: ["dev", "local", "redis"]
+        status: "active"
+        
+      - name: "MailHog"
+        url: "http://localhost:8025"
+        description: "Email testing and debugging"
+        tags: ["dev", "local", "email", "testing"]
+        status: "active"
+
+  - name: "Code Quality"
+    description: "Code analysis and quality tools"
+    icon: "search"
+    links:
+      - name: "SonarQube"
+        url: "https://sonar.company.com"
+        description: "Code quality and security analysis"
+        tags: ["quality", "analysis", "security"]
+        status: "active"
+        
+      - name: "Code Coverage"
+        url: "https://coverage.company.com"
+        description: "Test coverage reports"
+        tags: ["testing", "coverage", "quality"]
+        status: "active"
+        
+      - name: "Linting Reports"
+        url: "https://lint.company.com"
+        description: "Code style and quality reports"
+        tags: ["quality", "linting", "style"]
+        status: "active"
+
+  - name: "Testing"
+    description: "Testing tools and environments"
+    icon: "🧪"
+    links:
+      - name: "Test Environment"
+        url: "https://test.company.com"
+        description: "Dedicated testing environment"
+        tags: ["testing", "qa", "environment"]
+        status: "active"
+        
+      - name: "Test Data Generator"
+        url: "https://testdata.company.com"
+        description: "Generate test data for development"
+        tags: ["testing", "data", "development"]
+        status: "active"
+        
+      - name: "Performance Testing"
+        url: "https://perf.company.com"
+        description: "Load and performance testing tools"
+        tags: ["testing", "performance", "load"]
+        status: "active"
+
+  - name: "Development Tools"
+    description: "Essential development utilities"
+    icon: "settings"
+    links:
+      - name: "GitLab"
+        url: "https://gitlab.company.com"
+        description: "Source code repository and CI/CD"
+        tags: ["git", "ci", "cd", "repository"]
+        status: "active"
+        
+      - name: "Jira"
+        url: "https://company.atlassian.net"
+        description: "Issue tracking and project management"
+        tags: ["project", "management", "issues"]
+        status: "active"
+        
+      - name: "Confluence"
+        url: "https://company.atlassian.net/wiki"
+        description: "Technical documentation and specs"
+        tags: ["docs", "technical", "specs"]
+        status: "active"
+        
+      - name: "Swagger UI"
+        url: "https://api.company.com/docs"
+        description: "API documentation and testing"
+        tags: ["api", "docs", "testing"]
+        status: "active"
+
+  - name: "Monitoring & Debugging"
+    description: "Development monitoring and debugging tools"
+    icon: "🐛"
+    links:
+      - name: "Logs Viewer"
+        url: "https://logs.company.com"
+        description: "Application logs and debugging"
+        tags: ["logs", "debugging", "monitoring"]
+        status: "active"
+        
+      - name: "Metrics Dashboard"
+        url: "https://metrics.company.com"
+        description: "Development metrics and KPIs"
+        tags: ["metrics", "monitoring", "kpis"]
+        status: "active"
+        
+      - name: "Error Tracking"
+        url: "https://errors.company.com"
+        description: "Error monitoring and alerting"
+        tags: ["errors", "monitoring", "alerts"]
+        status: "active"

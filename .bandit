@@ -1,0 +1,2 @@
+exclude_dirs = ['tests', 'venv', '.venv', '.navspec', 'build', 'dist']
+skips = ['B101', 'B601']  # Skip assert_used and exec_used warnings

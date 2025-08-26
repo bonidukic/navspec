@@ -1,0 +1,128 @@
+metadata:
+  name: "Company Dashboard"
+  description: "All our internal tools and resources"
+  version: "1.0.0"
+  tags: ["default", "general"]
+
+categories:
+  - name: "Development"
+    description: "Development tools and environments"
+    icon: "computer"
+    links:
+      - name: "Local Development"
+        url: "http://localhost:3000"
+        description: "Local development server"
+        tags: ["dev", "local"]
+        status: "active"
+        
+      - name: "Staging Environment"
+        url: "https://staging.company.com"
+        description: "Staging environment for testing"
+        tags: ["staging", "testing"]
+        status: "active"
+        
+      - name: "Production"
+        url: "https://app.company.com"
+        description: "Live production application"
+        tags: ["production", "live"]
+        status: "active"
+        
+      - name: "GitHub"
+        url: "https://github.com/company"
+        description: "Source code repositories"
+        tags: ["dev", "git", "code"]
+        status: "active"
+
+  - name: "Operations"
+    description: "Operations and monitoring tools"
+    icon: "tools"
+    links:
+      - name: "Grafana"
+        url: "https://grafana.company.com"
+        description: "Metrics and monitoring dashboards"
+        tags: ["monitoring", "metrics", "ops"]
+        status: "active"
+        
+      - name: "Kubernetes Dashboard"
+        url: "https://k8s.company.com"
+        description: "Kubernetes cluster management"
+        tags: ["kubernetes", "cluster", "ops"]
+        status: "active"
+        
+      - name: "Jenkins"
+        url: "https://jenkins.company.com"
+        description: "CI/CD pipeline management"
+        tags: ["ci", "cd", "ops"]
+        status: "active"
+        
+      - name: "Prometheus"
+        url: "https://prometheus.company.com"
+        description: "Time series database and monitoring"
+        tags: ["monitoring", "metrics", "ops"]
+        status: "active"
+
+  - name: "Documentation"
+    description: "Internal and external documentation"
+    icon: "docs"
+    links:
+      - name: "Confluence"
+        url: "https://company.atlassian.net"
+        description: "Internal documentation and knowledge base"
+        tags: ["docs", "internal", "knowledge"]
+        status: "active"
+        
+      - name: "API Documentation"
+        url: "https://docs.company.com"
+        description: "API reference and examples"
+        tags: ["docs", "api", "reference"]
+        status: "active"
+        
+      - name: "Architecture Wiki"
+        url: "https://wiki.company.com"
+        description: "System architecture and design docs"
+        tags: ["docs", "architecture", "design"]
+        status: "active"
+
+  - name: "Communication"
+    description: "Team communication and collaboration"
+    icon: "chat"
+    links:
+      - name: "Slack"
+        url: "https://company.slack.com"
+        description: "Team chat and collaboration"
+        tags: ["chat", "collaboration", "team"]
+        status: "active"
+        
+      - name: "Zoom"
+        url: "https://company.zoom.us"
+        description: "Video conferencing and meetings"
+        tags: ["video", "meetings", "collaboration"]
+        status: "active"
+        
+      - name: "Notion"
+        url: "https://company.notion.so"
+        description: "Project management and notes"
+        tags: ["project", "management", "notes"]
+        status: "active"
+
+  - name: "Security"
+    description: "Security and access management"
+    icon: "security"
+    links:
+      - name: "VPN Portal"
+        url: "https://vpn.company.com"
+        description: "Secure remote access"
+        tags: ["security", "vpn", "access"]
+        status: "active"
+        
+      - name: "Password Manager"
+        url: "https://passwords.company.com"
+        description: "Team password management"
+        tags: ["security", "passwords", "access"]
+        status: "active"
+        
+      - name: "Security Dashboard"
+        url: "https://security.company.com"
+        description: "Security monitoring and alerts"
+        tags: ["security", "monitoring", "alerts"]
+        status: "active"
