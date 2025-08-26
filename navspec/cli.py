@@ -2,10 +2,16 @@
 
 import argparse
 import sys
+import threading
+import time
+import webbrowser
 from pathlib import Path
 
 from .config import ConfigManager
 from .server import create_server
+
+# Global flag to track if browser has been opened
+_browser_opened = False
 
 
 def main():
@@ -18,6 +24,7 @@ Examples:
   navspec serve                    # Serve dashboard from current directory
   navspec serve --port 7777       # Serve on port 7777
   navspec serve --config ./config # Serve from ./config directory
+  navspec serve --no-browser      # Serve without opening browser
   navspec init                    # Initialize new dashboard configuration
         """,
     )
@@ -40,6 +47,9 @@ Examples:
     )
     serve_parser.add_argument(
         "--no-reload", action="store_true", help="Disable auto-reload on file changes"
+    )
+    serve_parser.add_argument(
+        "--no-browser", action="store_true", help="Don't automatically open browser"
     )
 
     # Init command
@@ -80,6 +90,18 @@ Examples:
         sys.exit(1)
 
 
+def open_browser(host: str, port: int, delay: float = 1.0):
+    """Open the browser after a short delay to ensure server is running."""
+    time.sleep(delay)
+    url = f"http://{host}:{port}"
+    try:
+        webbrowser.open(url)
+        print(f"Browser opened: {url}")
+    except Exception as e:
+        print(f"Could not open browser automatically: {e}")
+        print(f"   Please open manually: {url}")
+
+
 def serve_dashboard(args):
     """Serve the dashboard."""
     config_path = Path(args.config).resolve()
@@ -104,6 +126,16 @@ def serve_dashboard(args):
     print(f"Server: http://{args.host}:{args.port}")
     print("Press Ctrl+C to stop")
     print()
+
+    # Only open browser once per session (unless disabled)
+    global _browser_opened
+    if not _browser_opened and not args.no_browser:
+        # Start browser opening in background thread
+        browser_thread = threading.Thread(
+            target=open_browser, args=(args.host, args.port), daemon=True
+        )
+        browser_thread.start()
+        _browser_opened = True
 
     try:
         server = create_server(
