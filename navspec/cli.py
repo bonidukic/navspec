@@ -167,7 +167,7 @@ def init_dashboard(args):
 
     try:
         # Create config manager to generate default config
-        config_manager = ConfigManager(str(config_path))
+        config_manager = ConfigManager(str(config_subdir))
 
         # Check if configs already exist
         existing_configs = config_manager.get_available_configs()
