@@ -1,10 +1,12 @@
 """
 Test configuration and shared fixtures for navspec tests.
 """
-import pytest
-from pathlib import Path
-import tempfile
+
 import shutil
+import tempfile
+from pathlib import Path
+
+import pytest
 
 
 @pytest.fixture
@@ -22,7 +24,7 @@ def sample_config():
         "metadata": {
             "name": "Test Dashboard",
             "description": "Test dashboard for unit tests",
-            "version": "1.0.0"
+            "version": "1.0.0",
         },
         "categories": [
             {
@@ -32,10 +34,9 @@ def sample_config():
                     {
                         "name": "Test Link",
                         "url": "https://example.com",
-                        "description": "Test link description"
+                        "description": "Test link description",
                     }
-                ]
+                ],
             }
-        ]
+        ],
     }
-

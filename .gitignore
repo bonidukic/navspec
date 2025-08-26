@@ -47,7 +47,6 @@ cover/
 
 # Linting and type checking
 .mypy_cache/
-bandit-report.json
 
 # Translations
 *.mo

@@ -1,4 +1,4 @@
-# navspec - Team Navigation Dashboard
+# navspec - Navigation Dashboard
 
 A declarative dashboard tool that allows teams to version control and share their links.
 
@@ -160,7 +160,7 @@ pip install -e .
 pre-commit install
 
 # Common development commands:
-make help              # Show all available commands
+make help             # Show all available commands
 make format           # Format code with black and isort
 make lint             # Run all linting tools
 make test             # Run tests
@@ -182,7 +182,6 @@ This project uses several tools to maintain code quality:
 - **isort**: Import sorting
 - **flake8**: Linting and style checking
 - **mypy**: Type checking
-- **bandit**: Security scanning
 - **pre-commit**: Git hooks for automatic checks
 - **pytest**: Testing framework
 

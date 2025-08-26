@@ -15,8 +15,6 @@ lint:  ## Run all linting tools
 	flake8 navspec/ tests/
 	@echo "Running mypy..."
 	mypy navspec/
-	@echo "Running bandit..."
-	bandit -r navspec/ -f json -o bandit-report.json || true
 	@echo "Linting complete!"
 
 format:  ## Format code with black and isort
@@ -45,7 +43,7 @@ clean:  ## Clean up generated files
 	find . -type d -name "*.egg-info" -exec rm -rf {} +
 	find . -type d -name ".pytest_cache" -exec rm -rf {} +
 	find . -type d -name ".mypy_cache" -exec rm -rf {} +
-	rm -rf build/ dist/ htmlcov/ .coverage bandit-report.json
+	rm -rf build/ dist/ htmlcov/ .coverage
 
 check-all: format-check lint test  ## Run all checks (format, lint, test)
 

@@ -1,13 +1,13 @@
 [flake8]
 max-line-length = 88
-extend-ignore = 
-    E203,  # whitespace before ':' (handled by black)
-    E501,  # line too long (handled by black)
-    W503,  # line break before binary operator (handled by black)
-    E722,  # do not use bare except (too strict for some cases)
-    F401,  # imported but unused (handled by isort)
-    F403,  # wildcard import (handled by isort)
-exclude = 
+extend-ignore =
+    E203,
+    E501,
+    W503,
+    E722,
+    F401,
+    F403
+exclude =
     .git,
     __pycache__,
     .venv,

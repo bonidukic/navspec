@@ -6,11 +6,11 @@ __email__ = "boni@dukic.dev"
 
 from .config import ConfigManager
 from .server import DashboardServer
-from .types import DashboardConfig, Category, Link, DashboardMetadata
+from .types import Category, DashboardConfig, DashboardMetadata, Link
 
 __all__ = [
     "ConfigManager",
-    "DashboardServer", 
+    "DashboardServer",
     "DashboardConfig",
     "Category",
     "Link",
